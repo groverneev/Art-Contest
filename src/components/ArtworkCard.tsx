@@ -13,12 +13,13 @@ export default function ArtworkCard({ submission, featured }: ArtworkCardProps) 
         featured ? "ring-2 ring-indigo-200" : ""
       }`}
     >
-      <div className="relative aspect-[4/3]">
+      <div className="relative bg-gray-50">
         <Image
           src={submission.image_url}
           alt={submission.title}
-          fill
-          className="object-cover"
+          width={800}
+          height={600}
+          className="w-full h-auto"
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
         />
         {featured && (
