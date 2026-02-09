@@ -17,6 +17,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Art Contest",
   description: "Submit your artwork and browse the gallery",
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({
