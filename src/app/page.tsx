@@ -24,19 +24,25 @@ export default async function Home() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-indigo-600 to-purple-700 text-white">
+      <section className="bg-gradient-to-br from-emerald-700 to-teal-800 text-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
-            Art Contest
+            2026 Dunebroom Earth Day Art Contest
           </h1>
-          <p className="text-lg sm:text-xl text-indigo-100 max-w-2xl mx-auto mb-10">
-            Showcase your creativity! Submit your artwork for a chance to be
-            featured in our gallery.
+          <p className="text-xl sm:text-2xl text-emerald-100 font-medium mb-4">
+            Celebrate Earth Day Through Art
+          </p>
+          <p className="text-lg text-emerald-100/90 max-w-2xl mx-auto mb-10">
+            Showcase your creativity in the 2026 Dunebroom Earth Day Art Contest!
+            We are calling on artists of all ages to share their love for our
+            planet. Submit your environmentally-inspired artwork for a chance to
+            win prizes, raise environmental awareness, and be featured in our
+            global digital gallery.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/submit"
-              className="inline-block bg-white text-indigo-600 font-semibold px-8 py-3 rounded-lg hover:bg-indigo-50 transition-colors"
+              className="inline-block bg-white text-emerald-700 font-semibold px-8 py-3 rounded-lg hover:bg-emerald-50 transition-colors"
             >
               Submit Your Artwork
             </Link>
@@ -50,43 +56,268 @@ export default async function Home() {
         </div>
       </section>
 
+      {/* Why Earth Day Matters */}
+      <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
+          Why Earth Day Matters
+        </h2>
+        <p className="text-gray-600 text-lg leading-relaxed">
+          Every year on April 22nd, people all around the globe come together to
+          celebrate Earth Day. It is a special day dedicated to protecting our
+          environment, cleaning up our oceans, planting trees, and learning how to
+          be better friends to nature. It reminds us that no matter where we live,
+          we all share one home: Earth. And right now, our home needs our help.
+          Your artwork can inspire your friends, your family, and your whole
+          community to take action and make a difference.
+        </p>
+      </section>
+
+      {/* Your Artistic Mission */}
+      <section className="bg-emerald-50 py-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
+            Your Artistic Mission
+          </h2>
+          <p className="text-gray-600 text-lg leading-relaxed mb-6">
+            Whether you love drawing vibrant rainforests, painting your favourite
+            endangered animals, or building sculptures out of recycled materials,
+            this is your chance to shine.
+          </p>
+          <p className="text-gray-600 text-lg leading-relaxed mb-8">
+            <strong>The Theme:</strong> Create a piece of art that shows why the
+            Earth is special to you, or your vision for a greener, cleaner future.
+          </p>
+          <div className="grid sm:grid-cols-2 gap-6">
+            <div className="bg-white rounded-xl p-6 shadow-sm">
+              <h3 className="font-semibold text-gray-900 text-lg mb-2">
+                Use Any Style You Want
+              </h3>
+              <p className="text-gray-600">
+                Grab your crayons, markers, paints, clay! You can even get creative
+                by making &ldquo;upcycled&rdquo; art out of clean, recycled
+                materials.
+              </p>
+            </div>
+            <div className="bg-white rounded-xl p-6 shadow-sm">
+              <h3 className="font-semibold text-gray-900 text-lg mb-2">
+                The Reward
+              </h3>
+              <p className="text-gray-600">
+                All approved artwork will be featured in our grand Earth Day
+                Digital Gallery, where your powerful message can be seen by
+                everyone!
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Age Groups & Prizes */}
+      <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <h2 className="text-3xl font-bold text-gray-900 mb-10 text-center">
+          Age Groups &amp; Prizes
+        </h2>
+        <div className="grid sm:grid-cols-2 gap-8">
+          <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+            <h3 className="text-xl font-bold text-emerald-700 mb-4">
+              5 to 10 Years
+            </h3>
+            <ul className="space-y-2 text-gray-600">
+              <li>1st Prize: &#8377;5,100 + Certificate</li>
+              <li>2nd Prize: &#8377;2,100 + Certificate</li>
+              <li>3rd Prize: &#8377;1,100 + Certificate</li>
+              <li>Honorary Mention (4): &#8377;501 each + Certificate</li>
+            </ul>
+          </div>
+          <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+            <h3 className="text-xl font-bold text-emerald-700 mb-4">
+              11 to 17 Years
+            </h3>
+            <ul className="space-y-2 text-gray-600">
+              <li>1st Prize: &#8377;5,100 + Certificate</li>
+              <li>2nd Prize: &#8377;2,100 + Certificate</li>
+              <li>3rd Prize: &#8377;1,100 + Certificate</li>
+              <li>Honorary Mention (4): &#8377;501 each + Certificate</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* Rules */}
+      <section className="bg-gray-50 py-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-gray-900 mb-10 text-center">
+            Rules of the Competition
+          </h2>
+          <div className="space-y-4">
+            <div className="bg-white rounded-xl p-6 shadow-sm">
+              <h3 className="font-semibold text-gray-900 mb-2">Eligibility</h3>
+              <p className="text-gray-600">
+                The age limit for participation is 5 to 17 years.
+              </p>
+            </div>
+            <div className="bg-white rounded-xl p-6 shadow-sm">
+              <h3 className="font-semibold text-gray-900 mb-2">Originality</h3>
+              <p className="text-gray-600">
+                The artwork must be original and recently created. It should not be
+                copied from any painting or source. The submitted work must be
+                entirely the participant&apos;s own creation.
+              </p>
+            </div>
+            <div className="bg-white rounded-xl p-6 shadow-sm">
+              <h3 className="font-semibold text-gray-900 mb-2">
+                Artwork Specifications
+              </h3>
+              <ul className="text-gray-600 list-disc list-inside space-y-1">
+                <li>Size: A4 (minimum) to Full Imperial (maximum)</li>
+                <li>Any medium is allowed</li>
+                <li>
+                  Allowed surfaces: Ivory Sheet, Cartridge Sheet, or Canvas
+                </li>
+                <li>
+                  Glitter or decorative materials must not be used or pasted on
+                  the artwork
+                </li>
+              </ul>
+            </div>
+            <div className="bg-white rounded-xl p-6 shadow-sm">
+              <h3 className="font-semibold text-gray-900 mb-2">Judging</h3>
+              <p className="text-gray-600">
+                The decision of the Selection Committee will be final and binding,
+                and no appeal will be entertained.
+              </p>
+            </div>
+            <div className="bg-white rounded-xl p-6 shadow-sm">
+              <h3 className="font-semibold text-gray-900 mb-2">
+                Award Money &amp; Certificates
+              </h3>
+              <p className="text-gray-600">
+                Our team will personally reach out to winning artists via email to
+                securely collect account details and arrange the transfer of award
+                money. All participants and winners will receive a soft copy
+                certificate sent to their registered email.
+              </p>
+            </div>
+            <div className="bg-white rounded-xl p-6 shadow-sm">
+              <h3 className="font-semibold text-gray-900 mb-2">
+                Important Dates
+              </h3>
+              <ul className="text-gray-600 list-disc list-inside space-y-1">
+                <li>Last Day of Submission: April 22, 2026, 11:59 PM IST</li>
+                <li>Declaration of Results: May 30, 2026</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How to Register */}
+      <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <h2 className="text-3xl font-bold text-gray-900 mb-10 text-center">
+          How to Register
+        </h2>
+        <p className="text-gray-600 text-center mb-10">
+          There is no participation fee. Follow these simple steps:
+        </p>
+        <div className="grid sm:grid-cols-2 gap-8">
+          <div className="flex gap-4">
+            <div className="flex-shrink-0 w-10 h-10 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center font-bold">
+              1
+            </div>
+            <div>
+              <h3 className="font-semibold text-gray-900">Register Online</h3>
+              <p className="text-gray-600 text-sm mt-1">
+                Fill out the online registration form with all necessary details.
+                Please ensure the information is complete and true.
+              </p>
+            </div>
+          </div>
+          <div className="flex gap-4">
+            <div className="flex-shrink-0 w-10 h-10 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center font-bold">
+              2
+            </div>
+            <div>
+              <h3 className="font-semibold text-gray-900">Upload Your Art</h3>
+              <p className="text-gray-600 text-sm mt-1">
+                Upload a clear image of your artwork at the time of registration.
+              </p>
+            </div>
+          </div>
+          <div className="flex gap-4">
+            <div className="flex-shrink-0 w-10 h-10 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center font-bold">
+              3
+            </div>
+            <div>
+              <h3 className="font-semibold text-gray-900">
+                Double-Check Your Email
+              </h3>
+              <p className="text-gray-600 text-sm mt-1">
+                Provide an accurate and active email address. This is our only way
+                to send certificates, updates, and contact you if you win!
+              </p>
+            </div>
+          </div>
+          <div className="flex gap-4">
+            <div className="flex-shrink-0 w-10 h-10 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center font-bold">
+              4
+            </div>
+            <div>
+              <h3 className="font-semibold text-gray-900">
+                Tell Us Your Story
+              </h3>
+              <p className="text-gray-600 text-sm mt-1">
+                Write a few lines about yourself and what inspired your Earth Day
+                artwork. We&apos;ll feature your story alongside your art!
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Featured Artwork Section */}
       {featured.length > 0 && (
-        <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-2 text-center">
-            Featured Artwork
-          </h2>
-          <p className="text-gray-500 text-center mb-10">
-            Our top picks from the contest
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {featured.map((submission) => (
-              <ArtworkCard key={submission.id} submission={submission} featured />
-            ))}
-          </div>
-          <div className="text-center mt-10">
-            <Link
-              href="/gallery"
-              className="text-indigo-600 font-medium hover:text-indigo-800 transition-colors"
-            >
-              View all artwork &rarr;
-            </Link>
+        <section className="bg-emerald-50 py-16">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold text-gray-900 mb-2 text-center">
+              Featured Artwork
+            </h2>
+            <p className="text-gray-500 text-center mb-10">
+              Top picks from our Earth Day contest
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {featured.map((submission) => (
+                <ArtworkCard
+                  key={submission.id}
+                  submission={submission}
+                  featured
+                />
+              ))}
+            </div>
+            <div className="text-center mt-10">
+              <Link
+                href="/gallery"
+                className="text-emerald-700 font-medium hover:text-emerald-900 transition-colors"
+              >
+                View all artwork &rarr;
+              </Link>
+            </div>
           </div>
         </section>
       )}
 
       {/* CTA Section */}
-      <section className="bg-gray-50 py-16">
+      <section className="bg-emerald-700 text-white py-16">
         <div className="max-w-3xl mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            Ready to Participate?
+          <h2 className="text-3xl font-bold mb-4">
+            Ready to Celebrate Earth Day?
           </h2>
-          <p className="text-gray-600 mb-8">
-            Submit your artwork and join other talented artists in our contest.
+          <p className="text-emerald-100 mb-8">
+            Submit your artwork by April 22, 2026 and join our Earth Day Digital
+            Gallery.
           </p>
           <Link
             href="/submit"
-            className="inline-block bg-indigo-600 text-white font-semibold px-8 py-3 rounded-lg hover:bg-indigo-700 transition-colors"
+            className="inline-block bg-white text-emerald-700 font-semibold px-8 py-3 rounded-lg hover:bg-emerald-50 transition-colors"
           >
             Submit Your Artwork
           </Link>

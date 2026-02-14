@@ -117,11 +117,11 @@ export default function AdminPage() {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             placeholder="Enter admin password"
-            className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-gray-900 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none"
+            className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-gray-900 focus:ring-2 focus:ring-emerald-600 focus:border-emerald-600 outline-none"
           />
           <button
             type="submit"
-            className="w-full bg-indigo-600 text-white font-semibold py-2.5 rounded-lg hover:bg-indigo-700 transition-colors"
+            className="w-full bg-emerald-700 text-white font-semibold py-2.5 rounded-lg hover:bg-emerald-800 transition-colors"
           >
             Login
           </button>
@@ -136,7 +136,7 @@ export default function AdminPage() {
         <h1 className="text-3xl font-bold text-gray-900">Admin Dashboard</h1>
         <button
           onClick={() => setShowUploadForm(!showUploadForm)}
-          className="bg-indigo-600 text-white font-medium px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors"
+          className="bg-emerald-700 text-white font-medium px-4 py-2 rounded-lg hover:bg-emerald-800 transition-colors"
         >
           {showUploadForm ? "Cancel Upload" : "Upload on Behalf"}
         </button>
@@ -162,13 +162,13 @@ export default function AdminPage() {
               name="artist_name"
               required
               placeholder="Artist name *"
-              className="border border-gray-300 rounded-lg px-4 py-2.5 text-gray-900 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none"
+              className="border border-gray-300 rounded-lg px-4 py-2.5 text-gray-900 focus:ring-2 focus:ring-emerald-600 focus:border-emerald-600 outline-none"
             />
             <select
               name="age_group"
               required
               defaultValue=""
-              className="border border-gray-300 rounded-lg px-4 py-2.5 text-gray-900 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none"
+              className="border border-gray-300 rounded-lg px-4 py-2.5 text-gray-900 focus:ring-2 focus:ring-emerald-600 focus:border-emerald-600 outline-none"
             >
               <option value="" disabled>Age group *</option>
               <option value="5 to 10 years">5 to 10 years</option>
@@ -179,27 +179,27 @@ export default function AdminPage() {
               name="title"
               required
               placeholder="Artwork title *"
-              className="border border-gray-300 rounded-lg px-4 py-2.5 text-gray-900 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none"
+              className="border border-gray-300 rounded-lg px-4 py-2.5 text-gray-900 focus:ring-2 focus:ring-emerald-600 focus:border-emerald-600 outline-none"
             />
             <input
               type="email"
               name="artist_email"
               required
               placeholder="Parent/guardian email *"
-              className="border border-gray-300 rounded-lg px-4 py-2.5 text-gray-900 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none"
+              className="border border-gray-300 rounded-lg px-4 py-2.5 text-gray-900 focus:ring-2 focus:ring-emerald-600 focus:border-emerald-600 outline-none"
             />
             <input
               type="tel"
               name="artist_phone"
               placeholder="Phone number (optional)"
-              className="border border-gray-300 rounded-lg px-4 py-2.5 text-gray-900 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none"
+              className="border border-gray-300 rounded-lg px-4 py-2.5 text-gray-900 focus:ring-2 focus:ring-emerald-600 focus:border-emerald-600 outline-none"
             />
             <textarea
               name="story"
               required
               placeholder="Tell us your story *"
               rows={2}
-              className="sm:col-span-2 border border-gray-300 rounded-lg px-4 py-2.5 text-gray-900 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none resize-none"
+              className="sm:col-span-2 border border-gray-300 rounded-lg px-4 py-2.5 text-gray-900 focus:ring-2 focus:ring-emerald-600 focus:border-emerald-600 outline-none resize-none"
             />
             <div className="sm:col-span-2">
               <input
@@ -216,7 +216,7 @@ export default function AdminPage() {
                     reader.readAsDataURL(file);
                   }
                 }}
-                className="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-medium file:bg-indigo-50 file:text-indigo-600 hover:file:bg-indigo-100"
+                className="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-medium file:bg-emerald-50 file:text-emerald-700 hover:file:bg-emerald-100"
               />
               {uploadPreview && (
                 <div className="mt-3 relative h-40 w-40">
@@ -249,7 +249,7 @@ export default function AdminPage() {
               onClick={() => handleFilterChange(status)}
               className={`px-4 py-2 rounded-lg text-sm font-medium capitalize transition-colors ${
                 filter === status
-                  ? "bg-indigo-600 text-white"
+                  ? "bg-emerald-700 text-white"
                   : "bg-gray-100 text-gray-600 hover:bg-gray-200"
               }`}
             >
@@ -369,7 +369,7 @@ export default function AdminPage() {
                       }
                       className={`text-xs font-medium px-3 py-1.5 rounded-lg transition-colors ${
                         submission.is_featured
-                          ? "bg-indigo-100 text-indigo-700 hover:bg-indigo-200"
+                          ? "bg-emerald-100 text-emerald-700 hover:bg-emerald-200"
                           : "bg-gray-100 text-gray-600 hover:bg-gray-200"
                       }`}
                     >

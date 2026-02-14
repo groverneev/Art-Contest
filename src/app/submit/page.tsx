@@ -52,11 +52,11 @@ export default function SubmitPage() {
       <div className="max-w-2xl mx-auto px-4 py-24 text-center">
         <div className="bg-green-50 border border-green-200 rounded-xl p-8">
           <h1 className="text-3xl font-bold text-green-800 mb-4">
-            Thank You!
+            Thank You for Your Submission!
           </h1>
           <p className="text-green-700 mb-6">
-            Your artwork has been submitted successfully. It will appear in the
-            gallery once it has been reviewed.
+            Your Earth Day artwork has been submitted successfully. It will
+            appear in the gallery once it has been reviewed.
           </p>
           <button
             onClick={() => setSuccess(false)}
@@ -71,10 +71,11 @@ export default function SubmitPage() {
 
   return (
     <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <h1 className="text-4xl font-bold text-gray-900 mb-2">Submit Artwork</h1>
+      <h1 className="text-4xl font-bold text-gray-900 mb-2">Submit Your Earth Day Artwork</h1>
       <p className="text-gray-500 mb-8">
-        Upload your artwork to enter the contest. All submissions will be
-        reviewed before appearing in the gallery.
+        Upload your artwork to enter the 2026 Dunebroom Earth Day Art Contest.
+        All submissions will be reviewed before appearing in the gallery. No
+        participation fee!
       </p>
 
       {error && (
@@ -94,7 +95,7 @@ export default function SubmitPage() {
             id="artist_name"
             name="artist_name"
             required
-            className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-gray-900 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none"
+            className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-gray-900 focus:ring-2 focus:ring-emerald-600 focus:border-emerald-600 outline-none"
             placeholder="Enter your name"
           />
         </div>
@@ -109,7 +110,7 @@ export default function SubmitPage() {
             name="age_group"
             required
             defaultValue=""
-            className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-gray-900 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none"
+            className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-gray-900 focus:ring-2 focus:ring-emerald-600 focus:border-emerald-600 outline-none"
           >
             <option value="" disabled>Select age group</option>
             <option value="5 to 10 years">5 to 10 years</option>
@@ -127,7 +128,7 @@ export default function SubmitPage() {
             id="artist_email"
             name="artist_email"
             required
-            className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-gray-900 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none"
+            className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-gray-900 focus:ring-2 focus:ring-emerald-600 focus:border-emerald-600 outline-none"
             placeholder="Your email"
           />
         </div>
@@ -141,7 +142,7 @@ export default function SubmitPage() {
             type="tel"
             id="artist_phone"
             name="artist_phone"
-            className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-gray-900 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none"
+            className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-gray-900 focus:ring-2 focus:ring-emerald-600 focus:border-emerald-600 outline-none"
             placeholder="Your phone number"
           />
         </div>
@@ -156,7 +157,7 @@ export default function SubmitPage() {
             id="title"
             name="title"
             required
-            className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-gray-900 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none"
+            className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-gray-900 focus:ring-2 focus:ring-emerald-600 focus:border-emerald-600 outline-none"
             placeholder="Give your artwork a title"
           />
         </div>
@@ -171,7 +172,7 @@ export default function SubmitPage() {
             name="story"
             rows={4}
             required
-            className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-gray-900 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none resize-none"
+            className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-gray-900 focus:ring-2 focus:ring-emerald-600 focus:border-emerald-600 outline-none resize-none"
             placeholder="Please write a few lines about yourself and what inspired your Earth Day artwork."
           />
         </div>
@@ -181,14 +182,14 @@ export default function SubmitPage() {
           <label className="block text-sm font-medium text-gray-700 mb-1">
             Artwork Image <span className="text-red-500">*</span>
           </label>
-          <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-indigo-400 transition-colors">
+          <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-emerald-400 transition-colors">
             <input
               type="file"
               name="image"
               accept="image/*"
               required
               onChange={handleImageChange}
-              className="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-medium file:bg-indigo-50 file:text-indigo-600 hover:file:bg-indigo-100"
+              className="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-medium file:bg-emerald-50 file:text-emerald-700 hover:file:bg-emerald-100"
             />
             {preview && (
               <div className="mt-4 relative aspect-video max-w-sm mx-auto">
@@ -206,7 +207,7 @@ export default function SubmitPage() {
         <button
           type="submit"
           disabled={submitting}
-          className="w-full bg-indigo-600 text-white font-semibold py-3 rounded-lg hover:bg-indigo-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+          className="w-full bg-emerald-700 text-white font-semibold py-3 rounded-lg hover:bg-emerald-800 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {submitting ? "Submitting..." : "Submit Artwork"}
         </button>

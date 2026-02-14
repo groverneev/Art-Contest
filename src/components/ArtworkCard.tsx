@@ -10,7 +10,7 @@ export default function ArtworkCard({ submission, featured }: ArtworkCardProps) 
   return (
     <div
       className={`bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition-shadow ${
-        featured ? "ring-2 ring-indigo-200" : ""
+        featured ? "ring-2 ring-emerald-200" : ""
       }`}
     >
       <div className="relative bg-gray-50">
@@ -23,7 +23,7 @@ export default function ArtworkCard({ submission, featured }: ArtworkCardProps) 
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
         />
         {featured && (
-          <span className="absolute top-3 right-3 bg-indigo-600 text-white text-xs font-medium px-2.5 py-1 rounded-full">
+          <span className="absolute top-3 right-3 bg-emerald-700 text-white text-xs font-medium px-2.5 py-1 rounded-full">
             Featured
           </span>
         )}

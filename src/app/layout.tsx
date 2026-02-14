@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Art Contest",
-  description: "Submit your artwork and browse the gallery",
+  title: "2026 Dunebroom Earth Day Art Contest",
+  description: "Showcase your creativity in the 2026 Dunebroom Earth Day Art Contest! Artists ages 5-17 can submit original artwork celebrating our planet.",
   icons: {
     icon: "/favicon.png",
   },

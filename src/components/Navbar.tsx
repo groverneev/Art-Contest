@@ -18,8 +18,9 @@ export default function Navbar() {
     <nav className="bg-white border-b border-gray-200 sticky top-0 z-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <Link href="/" className="text-xl font-bold text-gray-900">
-            Art Contest
+          <Link href="/" className="text-lg sm:text-xl font-bold text-gray-900 truncate max-w-[200px] sm:max-w-none">
+            <span className="hidden sm:inline">Dunebroom Earth Day Art Contest</span>
+            <span className="sm:hidden">Dunebroom Art Contest</span>
           </Link>
 
           {/* Desktop links */}
@@ -30,7 +31,7 @@ export default function Navbar() {
                 href={link.href}
                 className={`text-sm font-medium transition-colors ${
                   pathname === link.href
-                    ? "text-indigo-600"
+                    ? "text-emerald-700"
                     : "text-gray-600 hover:text-gray-900"
                 }`}
               >
@@ -65,7 +66,7 @@ export default function Navbar() {
                 onClick={() => setMenuOpen(false)}
                 className={`block px-3 py-2 rounded-md text-sm font-medium ${
                   pathname === link.href
-                    ? "bg-indigo-50 text-indigo-600"
+                    ? "bg-emerald-50 text-emerald-700"
                     : "text-gray-600 hover:bg-gray-50"
                 }`}
               >
