@@ -164,6 +164,16 @@ export default function AdminPage() {
               placeholder="Artist name *"
               className="border border-gray-300 rounded-lg px-4 py-2.5 text-gray-900 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none"
             />
+            <select
+              name="age_group"
+              required
+              defaultValue=""
+              className="border border-gray-300 rounded-lg px-4 py-2.5 text-gray-900 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none"
+            >
+              <option value="" disabled>Age group *</option>
+              <option value="5 to 10 years">5 to 10 years</option>
+              <option value="11 to 17 years">11 to 17 years</option>
+            </select>
             <input
               type="text"
               name="title"
@@ -174,18 +184,20 @@ export default function AdminPage() {
             <input
               type="email"
               name="artist_email"
-              placeholder="Artist email (optional)"
+              required
+              placeholder="Parent/guardian email *"
               className="border border-gray-300 rounded-lg px-4 py-2.5 text-gray-900 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none"
             />
             <input
               type="tel"
               name="artist_phone"
-              placeholder="Artist phone (optional)"
+              placeholder="Phone number (optional)"
               className="border border-gray-300 rounded-lg px-4 py-2.5 text-gray-900 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none"
             />
             <textarea
-              name="description"
-              placeholder="Description (optional)"
+              name="story"
+              required
+              placeholder="Tell us your story *"
               rows={2}
               className="sm:col-span-2 border border-gray-300 rounded-lg px-4 py-2.5 text-gray-900 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none resize-none"
             />
@@ -311,9 +323,14 @@ export default function AdminPage() {
                     {submission.artist_phone}
                   </p>
                 )}
-                {submission.description && (
+                {submission.age_group && (
+                  <p className="text-xs text-gray-400">
+                    Age group: {submission.age_group}
+                  </p>
+                )}
+                {submission.story && (
                   <p className="text-sm text-gray-600 mt-2 line-clamp-2">
-                    {submission.description}
+                    {submission.story}
                   </p>
                 )}
 

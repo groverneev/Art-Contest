@@ -1,10 +1,11 @@
 export interface Submission {
   id: string;
   artist_name: string;
-  artist_email: string | null;
+  age_group: string;
+  artist_email: string;
   artist_phone: string | null;
   title: string;
-  description: string | null;
+  story: string;
   image_url: string;
   status: "pending" | "approved" | "rejected";
   is_featured: boolean;

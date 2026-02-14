@@ -11,15 +11,16 @@ export async function POST(request: NextRequest) {
     const formData = await request.formData();
 
     const artist_name = formData.get("artist_name") as string;
-    const artist_email = (formData.get("artist_email") as string) || null;
+    const age_group = formData.get("age_group") as string;
+    const artist_email = formData.get("artist_email") as string;
     const artist_phone = (formData.get("artist_phone") as string) || null;
     const title = formData.get("title") as string;
-    const description = (formData.get("description") as string) || null;
+    const story = formData.get("story") as string;
     const image = formData.get("image") as File;
 
-    if (!artist_name || !title || !image) {
+    if (!artist_name || !age_group || !artist_email || !title || !story || !image) {
       return NextResponse.json(
-        { error: "Name, title, and image are required" },
+        { error: "All required fields must be filled out" },
         { status: 400 }
       );
     }
@@ -47,10 +48,11 @@ export async function POST(request: NextRequest) {
       .from("submissions")
       .insert({
         artist_name,
+        age_group,
         artist_email,
         artist_phone,
         title,
-        description,
+        story,
         image_url: urlData.publicUrl,
         status: "approved",
         is_featured: false,

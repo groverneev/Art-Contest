@@ -11,15 +11,16 @@ export async function POST(request: NextRequest) {
     const formData = await request.formData();
 
     const artist_name = formData.get("artist_name") as string;
-    const artist_email = (formData.get("artist_email") as string) || null;
+    const age_group = formData.get("age_group") as string;
+    const artist_email = formData.get("artist_email") as string;
     const artist_phone = (formData.get("artist_phone") as string) || null;
     const title = formData.get("title") as string;
-    const description = (formData.get("description") as string) || null;
+    const story = formData.get("story") as string;
     const image = formData.get("image") as File;
 
-    if (!artist_name || !title || !image) {
+    if (!artist_name || !age_group || !artist_email || !title || !story || !image) {
       return NextResponse.json(
-        { error: "Name, title, and image are required" },
+        { error: "All required fields must be filled out" },
         { status: 400 }
       );
     }
@@ -55,10 +56,11 @@ export async function POST(request: NextRequest) {
       .from("submissions")
       .insert({
         artist_name,
+        age_group,
         artist_email,
         artist_phone,
         title,
-        description,
+        story,
         image_url,
         status: "pending",
         is_featured: false,
@@ -83,10 +85,11 @@ export async function POST(request: NextRequest) {
           html: `
             <h2>New Artwork Submission</h2>
             <p><strong>Artist:</strong> ${artist_name}</p>
-            ${artist_email ? `<p><strong>Email:</strong> ${artist_email}</p>` : ""}
+            <p><strong>Age Group:</strong> ${age_group}</p>
+            <p><strong>Email:</strong> ${artist_email}</p>
             ${artist_phone ? `<p><strong>Phone:</strong> ${artist_phone}</p>` : ""}
             <p><strong>Title:</strong> ${title}</p>
-            ${description ? `<p><strong>Description:</strong> ${description}</p>` : ""}
+            <p><strong>Story:</strong> ${story}</p>
             <p><a href="${image_url}">View Image</a></p>
             <br/>
             <p>Log in to the admin dashboard to review this submission.</p>

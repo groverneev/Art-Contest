@@ -31,9 +31,9 @@ export default function ArtworkCard({ submission, featured }: ArtworkCardProps) 
       <div className="p-4">
         <h3 className="font-semibold text-gray-900 text-lg">{submission.title}</h3>
         <p className="text-sm text-gray-500 mt-1">by {submission.artist_name}</p>
-        {submission.description && (
+        {submission.story && (
           <p className="text-sm text-gray-600 mt-2 line-clamp-2">
-            {submission.description}
+            {submission.story}
           </p>
         )}
       </div>

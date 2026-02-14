@@ -87,7 +87,7 @@ export default function SubmitPage() {
         {/* Artist Name */}
         <div>
           <label htmlFor="artist_name" className="block text-sm font-medium text-gray-700 mb-1">
-            Your Name <span className="text-red-500">*</span>
+            Artist&apos;s Name <span className="text-red-500">*</span>
           </label>
           <input
             type="text"
@@ -99,24 +99,43 @@ export default function SubmitPage() {
           />
         </div>
 
-        {/* Email */}
+        {/* Age Group */}
+        <div>
+          <label htmlFor="age_group" className="block text-sm font-medium text-gray-700 mb-1">
+            Age Group <span className="text-red-500">*</span>
+          </label>
+          <select
+            id="age_group"
+            name="age_group"
+            required
+            defaultValue=""
+            className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-gray-900 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none"
+          >
+            <option value="" disabled>Select age group</option>
+            <option value="5 to 10 years">5 to 10 years</option>
+            <option value="11 to 17 years">11 to 17 years</option>
+          </select>
+        </div>
+
+        {/* Parent/Guardian Email */}
         <div>
           <label htmlFor="artist_email" className="block text-sm font-medium text-gray-700 mb-1">
-            Email <span className="text-gray-400">(optional)</span>
+            Parent/Guardian Email <span className="text-red-500">*</span>
           </label>
           <input
             type="email"
             id="artist_email"
             name="artist_email"
+            required
             className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-gray-900 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none"
-            placeholder="your@email.com"
+            placeholder="parent@email.com"
           />
         </div>
 
-        {/* Phone */}
+        {/* Phone Number */}
         <div>
           <label htmlFor="artist_phone" className="block text-sm font-medium text-gray-700 mb-1">
-            Phone <span className="text-gray-400">(optional)</span>
+            Phone Number <span className="text-gray-400">(optional)</span>
           </label>
           <input
             type="tel"
@@ -142,17 +161,18 @@ export default function SubmitPage() {
           />
         </div>
 
-        {/* Description */}
+        {/* Tell Us Your Story */}
         <div>
-          <label htmlFor="description" className="block text-sm font-medium text-gray-700 mb-1">
-            Description <span className="text-gray-400">(optional)</span>
+          <label htmlFor="story" className="block text-sm font-medium text-gray-700 mb-1">
+            Tell Us Your Story <span className="text-red-500">*</span>
           </label>
           <textarea
-            id="description"
-            name="description"
-            rows={3}
+            id="story"
+            name="story"
+            rows={4}
+            required
             className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-gray-900 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none resize-none"
-            placeholder="Tell us about your artwork"
+            placeholder="Please write a few lines about yourself and what inspired your Earth Day artwork."
           />
         </div>
 

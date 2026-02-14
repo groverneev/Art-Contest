@@ -4,10 +4,11 @@
 CREATE TABLE submissions (
   id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
   artist_name TEXT NOT NULL,
-  artist_email TEXT,
+  age_group TEXT NOT NULL,
+  artist_email TEXT NOT NULL,
   artist_phone TEXT,
   title TEXT NOT NULL,
-  description TEXT,
+  story TEXT NOT NULL,
   image_url TEXT NOT NULL,
   status TEXT NOT NULL DEFAULT 'pending' CHECK (status IN ('pending', 'approved', 'rejected')),
   is_featured BOOLEAN NOT NULL DEFAULT false,
