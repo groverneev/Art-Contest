@@ -18,20 +18,6 @@ The official website for the 2026 Dunebroom Earth Day Art Contest — an art com
 - [Resend](https://resend.com/) for email notifications
 - [Vercel](https://vercel.com/) for hosting
 
-## Getting Started
-
-1. Clone the repo
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Create a `.env.local` file with the required environment variables (Supabase URL, keys, Resend API key, admin password, admin email)
-4. Run the SQL in `supabase-setup.sql` in your Supabase SQL Editor to create the database table and storage bucket
-5. Start the dev server:
-   ```bash
-   npm run dev
-   ```
-
 ## Contest Details
 
 - **Age Groups**: 5-10 years, 11-17 years
