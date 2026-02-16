@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { supabase } from "@/lib/supabase";
 import { Submission } from "@/lib/types";
 import ArtworkCard from "@/components/ArtworkCard";
@@ -139,6 +140,58 @@ export default async function Home() {
               <li>3rd Prize: &#8377;1,100 + Certificate</li>
               <li>Honorary Mention (4): &#8377;501 each + Certificate</li>
             </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* Meet the Judges */}
+      <section className="bg-emerald-50 py-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-gray-900 mb-10 text-center">
+            Meet the Judges
+          </h2>
+          <div className="bg-white rounded-xl p-6 sm:p-8 shadow-sm">
+            <div className="flex flex-col sm:flex-row gap-6 sm:gap-8">
+              <div className="flex-shrink-0 flex justify-center">
+                <Image
+                  src="/Pavni-Diwanji-Profile-Picture.jpg"
+                  alt="Pavni Diwanji"
+                  width={200}
+                  height={200}
+                  className="rounded-full object-cover w-48 h-48"
+                />
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-emerald-700 mb-3 text-center sm:text-left">
+                  Artist Pavni Diwanji
+                </h3>
+                <div className="space-y-3 text-gray-600">
+                  <p>
+                    Pavni Diwanji is a contemporary visual artist whose work
+                    explores memory, emotional residue, and the interior
+                    landscapes of lived experience. Working primarily with
+                    pastels and charcoal, she creates expressive compositions
+                    that balance bold color with restraint, translating moments
+                    of connection, stillness, and transition into distilled
+                    visual form.
+                  </p>
+                  <p>
+                    She has a master&apos;s degree in Computer Science from
+                    Stanford University and has contributed to foundational web
+                    technologies such as Java and later held senior executive
+                    leadership roles at Silicon Valley companies including Google
+                    and Instagram. This background in analytical thinking and
+                    systems design informs her artistic practice, shaping a
+                    sustained dialogue between structure and intuition.
+                  </p>
+                  <p>
+                    Diwanji maintains her Artaye studio in Santa Cruz,
+                    California, and practices within the Santa Cruz Art League
+                    collective.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

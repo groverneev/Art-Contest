@@ -16,7 +16,7 @@ The official website for the 2026 Dunebroom Earth Day Art Contest — an art com
 ## Architecture Overview
 
 ### Pages
-- `/` — Homepage with hero, "Why Earth Day Matters", "Your Artistic Mission", age groups & prizes, rules, how to register, featured artwork, and CTA sections
+- `/` — Homepage with hero, "Why Earth Day Matters", "Your Artistic Mission", age groups & prizes, meet the judges, rules, how to register, featured artwork, and CTA sections
 - `/gallery` — Earth Day Art Gallery: featured artwork at top, all approved artwork below
 - `/submit` — Public registration form for artists to upload artwork (no participation fee)
 - `/admin` — Password-protected admin dashboard (password in `ADMIN_PASSWORD` env var)
